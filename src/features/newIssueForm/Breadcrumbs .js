@@ -35,6 +35,5 @@ const useStyles = createUseStyles({
     cont: {
         padding: '13px 0 0 20px',
         position: 'absolute',
-        top: 0
     },
 });
