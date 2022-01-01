@@ -1,0 +1,121 @@
+$bcgrTextColor: #9aa6ac;
+$mainFontSize: 14px;
+
+@font-face {
+    font-family: "Inter", sans-serif;
+    src: url(https://fonts.googleapis.com/css2?family=Inter&display=swap);
+}
+
+.common-forms-style {
+    font-family: Inter;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border: 1px solid #dde2e4;
+    outline: none;
+    font-size: $mainFontSize;
+    letter-spacing: -0.006em;
+    &::-webkit-input-placeholder {
+        color: $bcgrTextColor;
+    }
+    &:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+}
+
+.new-issure__title {
+    padding-left: 10px;
+    width: 535px;
+    height: 32px;
+    margin-top: 51px;
+    margin-left: 20px;
+    margin-bottom: 22px;
+}
+
+.new-issure__select-priority {
+    width: 105px;
+    height: 32px;
+    margin-left: 22px;
+    color: $bcgrTextColor;
+}
+
+.new-issure__input-other {
+    color: $bcgrTextColor;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border: 1px solid #dde2e4;
+    width: 105px;
+    height: 32px;
+    margin-left: 10px;
+}
+
+.new-issure__description {
+    padding: 4px 10px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border: 1px solid #dde2e4;
+    width: 535px;
+    height: 122px;
+    margin-left: 22px;
+    margin-top: 22px;
+    line-height: 20px;
+    &::-webkit-input-placeholder {
+        font-family: Inter;
+        color: $bcgrTextColor;
+    }
+}
+.new-issure__validation-error {
+    color: red;
+    font-family: Inter;
+    left: 20px;
+    position: absolute;
+    width: 525px;
+    line-height: 32px;
+}
+.new-issure__validation-error-title{
+    text-align: left;
+    top: 75px;
+}
+.new-issure__validation-error-points{
+    padding-left: 115px;
+    top: 130px;
+}
+
+#new-issure__title-calc {
+    color: #f2994a;
+    font-family: Inter;
+    height: 32px;
+    top: 51px;
+    left: 560px;
+    position: absolute;
+    text-align: right;
+    line-height: 32px;
+}
+
+#new-issure__descr-calc {
+    color: #f2994a;
+    font-family: Inter;
+    height: 32px;
+    top: 162px;
+    left: 560px;
+    position: absolute;
+    text-align: right;
+    line-height: 32px;
+}
+
+.new-issure__btn-go-back {
+    background: #F2994A;
+    height: 32px;
+    width: 93px;
+    border-radius: 6px;
+    position: absolute;
+    top: 310px;
+    left: 464px;
+    p {
+        color: #F6F8F9;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0;
+        line-height: 32px;
+        text-align: center;
+    }
+}
