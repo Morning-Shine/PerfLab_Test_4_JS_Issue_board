@@ -42,7 +42,8 @@ function dragStartHandler(task, setCurrentTask) {
 const useStyles = createUseStyles({
     container: {
         margin: '8px',
-        background: 'white',
+        // background: 'white', TODO
+        background: '#DFCA9C',
         borderRadius: '6px',
         cursor: "grab",
     },

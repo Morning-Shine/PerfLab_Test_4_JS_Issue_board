@@ -14,8 +14,8 @@ export default function ScreenIssueBoards(props) {
 
     return (
         <div className={styles.container}>
-            {/* <Breadcrumbs/> */}
-            <Foo/>
+            <Breadcrumbs/>
+            {/* <Foo/> */}
             <DeskHeader/>
             <NewIssureBtn/>
             <Foo/>

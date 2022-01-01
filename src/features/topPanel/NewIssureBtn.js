@@ -1,6 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -21,6 +21,8 @@ export default function NewIssureBtn() {
 const useStyles = createUseStyles({
     cont: {
         alignSelf: "center",
+        gridRowStart: '2',
+        gridRowEnd: '3',
     },
     link: {
         textDecoration: 'none',

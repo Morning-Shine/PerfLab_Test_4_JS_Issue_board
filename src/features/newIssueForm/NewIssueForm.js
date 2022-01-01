@@ -7,6 +7,7 @@ import {
     validationDescription,
     validationStoryPoints
 } from "../../supportFunctions/formValidation";
+import Breadcrumbs from "./Breadcrumbs ";
 
 
 const useInput = (initialValue, validations) => {
@@ -96,101 +97,104 @@ export default function NewIssueForm() {
 
 
     return (
-        <form className="form-title">
-            {(title.isDirty && title.isEmpty) &&
-                <div className="new-issure__validation-error new-issure__validation-error-title">
-                    название задачи обязательно
-                </div>
-            }
-            {(title.isDirty && title.minLengthError && !title.isEmpty) &&
-                <div className="new-issure__validation-error new-issure__validation-error-title">
-                    минимум 3 символа в названии
-                </div>
-            }
-            {title.calcLength > 0 &&
-                <div id="new-issure__title-calc">{title.calcLength}/{validationTitle.maxLength}
-                </div>
-            }
-            <input
-                value={title.value}
-                onChange={e => title.onChange(e)}
-                onBlur={e => title.onBlur(e)}
-                required
-                placeholder="Title * (максимум 100 символов)"
-                maxLength={100}
-                type="text"
-                className='common-forms-style new-issure__title'
-            />
-            <div>
-                <select
-                    onChange={e => { setPriority(e.target.value) }}
-                    size={'1'}
-                    defaultValue={'empty'}
-                    className='common-forms-style new-issure__select-priority'>
-                    <option disabled value='empty'>Priority</option>
-                    <option value="critical">critical</option>
-                    <option value="major">major</option>
-                    <option value="normal">normal</option>
-                    <option value="minor">minor</option>
-                    <option value="undefined" >undefined</option>
-                </select>
-
+        <>
+            <Breadcrumbs />
+            <form className="form-title">
+                {(title.isDirty && title.isEmpty) &&
+                    <div className="new-issure__validation-error new-issure__validation-error-title">
+                        название задачи обязательно
+                    </div>
+                }
+                {(title.isDirty && title.minLengthError && !title.isEmpty) &&
+                    <div className="new-issure__validation-error new-issure__validation-error-title">
+                        минимум 3 символа в названии
+                    </div>
+                }
+                {title.calcLength > 0 &&
+                    <div id="new-issure__title-calc">{title.calcLength}/{validationTitle.maxLength}
+                    </div>
+                }
                 <input
-                    type="number"
-                    onChange={e => storyPoints.onChange(e)}
-                    onBlur={e => storyPoints.onBlur(e)}
-                    min="1"
-                    max="10"
-                    placeholder="Story points"
-                    className='common-forms-style new-issure__input-other'
+                    value={title.value}
+                    onChange={e => title.onChange(e)}
+                    onBlur={e => title.onBlur(e)}
+                    required
+                    placeholder="Title * (максимум 100 символов)"
+                    maxLength={100}
+                    type="text"
+                    className='common-forms-style new-issure__title'
                 />
-                {(storyPoints.isDirty && storyPoints.minValueError) &&
-                    <div className="new-issure__validation-error new-issure__validation-error-points">
-                        допускается число не менее 1
-                    </div>
-                }
-                {(storyPoints.isDirty && storyPoints.maxValueError && !storyPoints.minValueError) &&
-                    <div className="new-issure__validation-error new-issure__validation-error-points">
-                        допускается число не более 10
-                    </div>
-                }
+                <div>
+                    <select
+                        onChange={e => { setPriority(e.target.value) }}
+                        size={'1'}
+                        defaultValue={'empty'}
+                        className='common-forms-style new-issure__select-priority'>
+                        <option disabled value='empty'>Priority</option>
+                        <option value="critical">critical</option>
+                        <option value="major">major</option>
+                        <option value="normal">normal</option>
+                        <option value="minor">minor</option>
+                        <option value="undefined" >undefined</option>
+                    </select>
 
-                <select
-                    onChange={e => { setStatus(e.target.value) }}
-                    size={'1'}
-                    defaultValue={'empty'}
-                    className='common-forms-style new-issure__input-other'>
-                    <option disabled value='empty'>Status</option>
-                    <option value="todo">TO DO</option>
-                    <option value="in_progress">IN PROGRESS</option>
-                    <option value="test">TEST</option>
-                    <option value="done">DONE</option>
-                </select>
-            </div>
+                    <input
+                        type="number"
+                        onChange={e => storyPoints.onChange(e)}
+                        onBlur={e => storyPoints.onBlur(e)}
+                        min="1"
+                        max="10"
+                        placeholder="Story points"
+                        className='common-forms-style new-issure__input-other'
+                    />
+                    {(storyPoints.isDirty && storyPoints.minValueError) &&
+                        <div className="new-issure__validation-error new-issure__validation-error-points">
+                            допускается число не менее 1
+                        </div>
+                    }
+                    {(storyPoints.isDirty && storyPoints.maxValueError && !storyPoints.minValueError) &&
+                        <div className="new-issure__validation-error new-issure__validation-error-points">
+                            допускается число не более 10
+                        </div>
+                    }
 
-            <textarea
-                onChange={e => description.onChange(e)}
-                onBlur={e => description.onBlur(e)}
-                placeholder="Description (максимум 300 символов)"
-                maxLength={300}
-                className='common-forms-style new-issure__description'
-            />
-
-            {description.calcLength > 0 &&
-                <div id="new-issure__descr-calc">
-                    {description.calcLength}/{validationDescription.maxLength}
+                    <select
+                        onChange={e => { setStatus(e.target.value) }}
+                        size={'1'}
+                        defaultValue={'empty'}
+                        className='common-forms-style new-issure__input-other'>
+                        <option disabled value='empty'>Status</option>
+                        <option value="todo">TO DO</option>
+                        <option value="in_progress">IN PROGRESS</option>
+                        <option value="test">TEST</option>
+                        <option value="done">DONE</option>
+                    </select>
                 </div>
-            }
 
-            {btnProps}
+                <textarea
+                    onChange={e => description.onChange(e)}
+                    onBlur={e => description.onBlur(e)}
+                    placeholder="Description (максимум 300 символов)"
+                    maxLength={300}
+                    className='common-forms-style new-issure__description'
+                />
 
-            <nav>
-                <Link to="/" >
-                    <div className='new-issure__btn-go-back'>
-                        <p >Go back</p>
+                {description.calcLength > 0 &&
+                    <div id="new-issure__descr-calc">
+                        {description.calcLength}/{validationDescription.maxLength}
                     </div>
-                </Link>
-            </nav >
-        </form>
+                }
+
+                {btnProps}
+
+                <nav>
+                    <Link to="/" >
+                        <div className='new-issure__btn-go-back'>
+                            <p >Go back</p>
+                        </div>
+                    </Link>
+                </nav >
+            </form>
+        </>
     )
 }

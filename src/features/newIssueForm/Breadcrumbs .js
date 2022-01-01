@@ -11,8 +11,11 @@ export default function () {
         <Link underline="hover" key="1" color="inherit" href="/">
             International
         </Link>,
-        <Typography underline="hover" key="2" color="text.primary">
+        <Link underline="hover" key="2" color="inherit"  href="/">
             Issue Boards
+        </Link>,
+        <Typography underline="hover" key="2" color="text.primary">
+            New Issue
         </Typography>
     ];
 
@@ -30,9 +33,8 @@ export default function () {
 
 const useStyles = createUseStyles({
     cont: {
-        alignSelf: "center",
-        gridColumnStart: '1',
-        gridColumnEnd: '3',
         padding: '13px 0 0 20px',
+        position: 'absolute',
+        top: 0
     },
 });
