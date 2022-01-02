@@ -2,19 +2,19 @@ export default function showPriorityImg(priority) {
     let imgName;
     switch (priority) {
         case 'critical':
-            imgName = 'priorityCritical.png';
+            imgName = 'images/priorityCritical.png';
             break;
         case 'major':
-            imgName = 'priorityMajor.png';
+            imgName = 'images/priorityMajor.png';
             break;
         case 'normal':
-            imgName = 'priorityNormal.png';
+            imgName = 'images/priorityNormal.png';
             break;
         case 'minor':
-            imgName = 'priorityMinor.png';
+            imgName = 'images/priorityMinor.png';
             break;
         default:
-            imgName = 'priorityUndefined.png';
+            imgName = 'images/priorityUndefined.png';
             break;
     }
     return imgName

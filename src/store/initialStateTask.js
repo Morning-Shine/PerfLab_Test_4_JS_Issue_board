@@ -4,8 +4,8 @@ export const initialStateTasks = [
         status: 'todo',
         priority: 'major',
         storyPoints: 2,
-        title: 'As a translator, I want integrate Crowdin webhook to notify translators about changed strings',
-        content: 'DESCRIPTION: As a translator, I want integrate Crowdin webhook to notify translators about changed strings',
+        title: 'Сделать более заметными поля "Название интервью" и "Респондент"',
+        content: 'Сейчас многие пользователи жалуются на незаметные поля "Название интервью" и "Респондент" на первом экране при добавлении интервью. Нужен макет с более заметными полями',
     },
     {
         taskId: 'BC–14',

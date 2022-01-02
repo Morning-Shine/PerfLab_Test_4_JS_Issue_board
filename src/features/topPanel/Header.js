@@ -1,4 +1,3 @@
-import { hover } from "@testing-library/user-event/dist/hover";
 import React from "react";
 import { createUseStyles } from "react-jss";
 
@@ -23,14 +22,10 @@ const useStyles = createUseStyles({
         alignSelf: "center",
         justifySelf: "flex-start",
         height: '32px',
-        //width: '145px',
-        //border: '1px solid red',
     },
     p: {
         display: 'inline-block',
-        // border: '1px solid green',
         lineHeight: '32px',
-        // background: 'white',
         color: '000',
         fontSize: '24px',
         fontWeight: '600',

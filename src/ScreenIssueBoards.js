@@ -31,11 +31,10 @@ const useStyles = createUseStyles({
         margin: 0,
         width: '100vw',
         height: '100vh',
-        background: '#203563',
+        // background: '#203563',
         display: 'grid',
         gridTemplateRows: '5vh 7vh 8vh 80vh',
         gridTemplateColumns: '185px auto',
         gridTemplateAreas: "breadcrumbs breadcrumbs header newTask search search todo todo"
-        //border: 'red 2px solid',
     }
 })

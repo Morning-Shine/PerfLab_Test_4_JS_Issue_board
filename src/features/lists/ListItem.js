@@ -1,11 +1,13 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import { Link } from "react-router-dom";
 import showPriorityImg from "../../supportFunctions/showPriorityImg";
 
 
-export default function ListItem({taskInfo, setCurrentTask}) {
+export default function ListItem({ taskInfo, setCurrentTask }) {
     const styles = useStyles();
     const imgUrl = showPriorityImg(taskInfo.priority);
+    console.log(imgUrl);
 
     let containerClassName = styles.container;
 
@@ -16,9 +18,14 @@ export default function ListItem({taskInfo, setCurrentTask}) {
             onDragStart={() => dragStartHandler(taskInfo, setCurrentTask)}
         >
             <div className={styles.pDiv}>
-                <p className={styles.p}>
-                    {taskInfo.title}
-                </p>
+                <Link
+                    to={`/current_task/${taskInfo.taskId}`}
+                    className={styles.link}
+                >
+                    <p className={styles.p}>
+                        {taskInfo.title}
+                    </p>
+                </Link>
             </div>
             <div className={styles.taskFooter}>
                 <img src={imgUrl} className={styles.img} />
@@ -42,8 +49,8 @@ function dragStartHandler(task, setCurrentTask) {
 const useStyles = createUseStyles({
     container: {
         margin: '8px',
-        // background: 'white', TODO
-        background: '#DFCA9C',
+        background: 'white',// TODO
+       // background: '#DFCA9C',
         borderRadius: '6px',
         cursor: "grab",
     },
@@ -59,6 +66,11 @@ const useStyles = createUseStyles({
     p: {
         lineHeight: '20px',
         margin: 0,
+    },
+    link: {
+        textDecoration: "none",
+        color: '#252C32',
+
     },
     taskFooter: {
         display: 'grid',

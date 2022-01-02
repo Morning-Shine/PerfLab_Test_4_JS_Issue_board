@@ -3,6 +3,7 @@ import { createUseStyles } from "react-jss";
 import { useDispatch } from "react-redux";
 import { addTask } from "../lists/tasksHandlerSlice";
 import randomTaskId from "../../supportFunctions/randomTaskId";
+import { red } from "@mui/material/colors";
 
 
 export function SaveNewIssueBtn(props) {
@@ -98,7 +99,8 @@ const useStyles = createUseStyles({
         backgroundColor: 'white',
         display: 'flex',
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        backgroundColor: "#E5E9EB",
     },
     popup_p: {
         margin: '0',

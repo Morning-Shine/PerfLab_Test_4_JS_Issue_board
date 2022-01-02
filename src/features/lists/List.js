@@ -42,9 +42,10 @@ const useStyles = createUseStyles({
         padding: 0,
         margin: 0,
         width: '100%',
-        background: '#8597A7',
-        //background: '#F6F8F9', //TODO поменять background
+        //background: '#8597A7',
+        background: '#F6F8F9', //TODO поменять background
         borderRadius: '6px 6px 0px 0px',
+        overflow: 'hidden',
     },
     header: {
         margin: '12px auto 8px 16px',

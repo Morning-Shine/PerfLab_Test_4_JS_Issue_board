@@ -37,8 +37,7 @@ export default function ListContainer(/*lists*/{searchInputValue}) {
 
     let tasks = useSelector(state => state.tasks.tasksArray);
     let filterSearch = searchInputValue;
-     console.log('filterSearch', filterSearch);
-    
+      
     if (filterSearch) {
          tasks = tasks.filter(task => {
             return (task.taskId.toLowerCase().includes(filterSearch.toLowerCase())
@@ -89,6 +88,7 @@ const useStyles = createUseStyles({
         display: "grid",
         gridColumnGap: '10px',
         gridTemplateColumns: 'repeat(4, 1fr)',
+
     }
 })
 

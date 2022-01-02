@@ -10,8 +10,8 @@ const tasksHandlerSlice = createSlice({
         addTask: (state, action) => {
             state.tasksArray.push(action.payload);
         },
-        deleteTask: (state, action) => {
-            //удалить задачу
+        changeTask: (state, action) => {
+            //изменить задачу
         },
         changeTask: (state, action) => {
             if (action.payload.currentTask.status != action.payload.targetBoardName) {

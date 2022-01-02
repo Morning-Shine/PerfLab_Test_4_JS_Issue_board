@@ -18,6 +18,6 @@ const useStyles = createUseStyles({
     cont: {
         height: '100vh',
         width: '100vw',
-        background: '#203563',
+       // background: '#203563',
     }
 })
