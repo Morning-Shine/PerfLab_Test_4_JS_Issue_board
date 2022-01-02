@@ -1,13 +1,10 @@
 import React from "react";
-import reactDom from "react-dom";
 import NewIssueForm from "./features/newIssueForm/NewIssueForm";
-import Breadcrumbs from "./features/topPanel/Breadcrumbs ";
-import Foo from "./Foo";
 import { createUseStyles } from "react-jss";
 
 
 
-export default function ScreenNewIssure() {
+export default function ScreenNewIssue() {
     const styles = useStyles();
 
     return (

@@ -22,7 +22,7 @@ $mainFontSize: 14px;
     }
 }
 
-.new-issure__title {
+.new-issue__title {
     padding-left: 10px;
     width: 535px;
     height: 32px;
@@ -31,14 +31,14 @@ $mainFontSize: 14px;
     margin-bottom: 22px;
 }
 
-.new-issure__select-priority {
+.new-issue__select-priority {
     width: 105px;
     height: 32px;
     margin-left: 22px;
     color: $bcgrTextColor;
 }
 
-.new-issure__input-other {
+.new-issue__input-other {
     color: $bcgrTextColor;
     border-radius: 6px;
     box-sizing: border-box;
@@ -48,7 +48,7 @@ $mainFontSize: 14px;
     margin-left: 10px;
 }
 
-.new-issure__description {
+.new-issue__description {
     padding: 4px 10px;
     border-radius: 6px;
     box-sizing: border-box;
@@ -63,7 +63,7 @@ $mainFontSize: 14px;
         color: $bcgrTextColor;
     }
 }
-.new-issure__validation-error {
+.new-issue__validation-error {
     color: red;
     font-family: Inter;
     left: 20px;
@@ -71,16 +71,16 @@ $mainFontSize: 14px;
     width: 525px;
     line-height: 32px;
 }
-.new-issure__validation-error-title{
+.new-issue__validation-error-title{
     text-align: left;
     top: 75px;
 }
-.new-issure__validation-error-points{
+.new-issue__validation-error-points{
     padding-left: 115px;
     top: 130px;
 }
 
-#new-issure__title-calc {
+#new-issue__title-calc {
     color: #f2994a;
     font-family: Inter;
     height: 32px;
@@ -91,7 +91,7 @@ $mainFontSize: 14px;
     line-height: 32px;
 }
 
-#new-issure__descr-calc {
+#new-issue__descr-calc {
     color: #f2994a;
     font-family: Inter;
     height: 32px;
@@ -102,7 +102,7 @@ $mainFontSize: 14px;
     line-height: 32px;
 }
 
-.new-issure__btn-go-back {
+.new-issue__btn-go-back {
     background: #F2994A;
     height: 32px;
     width: 93px;

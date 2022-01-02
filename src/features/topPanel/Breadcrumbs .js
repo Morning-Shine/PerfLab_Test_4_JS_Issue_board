@@ -30,7 +30,7 @@ export default function () {
 
 const useStyles = createUseStyles({
     cont: {
-        alignSelf: "center",
+        alignSelf: "top",
         gridColumnStart: '1',
         gridColumnEnd: '3',
         padding: '13px 0 0 20px',

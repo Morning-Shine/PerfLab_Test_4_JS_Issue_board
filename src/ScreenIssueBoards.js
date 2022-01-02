@@ -1,29 +1,26 @@
-import React from "react";
-import reactDom from "react-dom";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import { createUseStyles } from "react-jss";
 import ListContainer from "./features/lists/ListsContainer";
 import Breadcrumbs from "./features/topPanel/Breadcrumbs ";
 import DeskHeader from "./features/topPanel/Header";
-import NewIssureBtn from "./features/topPanel/NewIssureBtn";
+import NewIssueBtn from "./features/topPanel/NewIssueBtn";
+import SearchIssue from "./features/topPanel/SearchIssue";
 import Foo from "./Foo";
 
 
 export default function ScreenIssueBoards(props) {
     const styles = useStyles();
+    const [searchInputValue, setSearchInputValue] = useState('');
 
     return (
         <div className={styles.container}>
             <Breadcrumbs/>
             {/* <Foo/> */}
             <DeskHeader/>
-            <NewIssureBtn/>
-            <Foo/>
-            <ListContainer/>
-            {/* <p>тут какой-то текст</p> */}
-            {/* <nav>
-                <Link to="/">ScreenIssueBoards</Link>
-            </nav> */}
+            <NewIssueBtn/>
+            {/* <Foo/> */}
+            <SearchIssue setSearchInputValue={setSearchInputValue}/>
+            <ListContainer searchInputValue={searchInputValue}/>
         </div>
     )
 }
@@ -36,7 +33,7 @@ const useStyles = createUseStyles({
         height: '100vh',
         background: '#203563',
         display: 'grid',
-        gridTemplateRows: 'repeat(3, auto) 76vh',
+        gridTemplateRows: '5vh 7vh 8vh 80vh',
         gridTemplateColumns: '185px auto',
         gridTemplateAreas: "breadcrumbs breadcrumbs header newTask search search todo todo"
         //border: 'red 2px solid',

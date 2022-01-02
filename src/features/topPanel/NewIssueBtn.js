@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 
-export default function NewIssureBtn() {
+export default function NewIssueBtn() {
     const styles = useStyles();
     return (
         <nav className={styles.cont}>

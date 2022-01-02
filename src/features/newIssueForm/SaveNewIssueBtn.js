@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { createUseStyles } from "react-jss";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { addTask } from "../lists/tasksHandlerSlice";
 import randomTaskId from "../../supportFunctions/randomTaskId";
 
 
-export function SaveNewIssureBtn(props) {
+export function SaveNewIssueBtn(props) {
     const [popupVisible, setPopupVisible] = useState(false);
     const styles = useStyles();
     const dispatch = useDispatch();
@@ -41,7 +40,7 @@ export function SaveNewIssureBtn(props) {
     )
 }
 
-export function SaveNewIssureBtnDisabled() {
+export function SaveNewIssueBtnDisabled() {
     const styles = useStyles();
     return (
         <div className={styles.cont}>
@@ -92,7 +91,7 @@ const useStyles = createUseStyles({
     popup: {
         position: 'absolute',
         borderRadius: '6px',
-        top: '20px',
+        top: '15px',
         left: '20px',
         width: '580px',
         height: '350px',

@@ -29,19 +29,29 @@ const lists = [
     },
 ]
 
-export default function ListContainer(/*lists*/) {
+export default function ListContainer(/*lists*/{searchInputValue}) {
     const [currentTask, setCurrentTask] = useState('');
     const [targetBoardName, setTargetBoardName] = useState(null);
 
     const styles = useStyles();
+
+    let tasks = useSelector(state => state.tasks.tasksArray);
+    let filterSearch = searchInputValue;
+     console.log('filterSearch', filterSearch);
     
-    const tasks = useSelector(state => state.tasks.tasksArray);
+    if (filterSearch) {
+         tasks = tasks.filter(task => {
+            return (task.taskId.toLowerCase().includes(filterSearch.toLowerCase())
+            || task.title.toLowerCase().includes(filterSearch.toLowerCase()))
+        })
+    }
+
     const dispatch = useDispatch();
     const changeTaskStatus = () => dispatch(changeTask({ currentTask, targetBoardName }));
 
     useEffect(() => {
         if (currentTask && targetBoardName) {
-            changeTaskStatus({currentTask, targetBoardName});
+            changeTaskStatus({ currentTask, targetBoardName });
             setCurrentTask('');
             setTargetBoardName(null);
         }
